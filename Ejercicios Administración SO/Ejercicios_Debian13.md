@@ -5,17 +5,41 @@
 ### Ejercicio 1. Identificar el sistema operativo
 - Mostrar la versión de Debian.
 - Mostrar información del kernel.
+  
+  
+## Ejercicio 1
+```bash
+cat /etc/os-release
+uname -r
+uname -a
+hotsnamectl
+```
+
 
 ### Ejercicio 2. Navegar por el sistema de archivos
 - Mostrar el directorio actual.
 - Ir a `/etc`.
 - Volver al directorio personal.
 
+## Ejercicio 2
+```bash
+pwd
+cd /etc
+cd ~
+```
+
 ### Ejercicio 3. Listar archivos
 - Mostrar archivos del directorio actual.
 - Mostrar también los ocultos.
 - Ver permisos y tamaños.
 
+
+## Ejercicio 3
+```bash
+ls
+ls -a
+ls -lah
+```
 ### Ejercicio 4. Crear directorios
 Crear la estructura:
 
@@ -26,28 +50,67 @@ empresa
 └── copias
 ```
 
+## Ejercicio 4
+```bash
+mkdir -p empresa/{usuarios,documentos,copias}
+```
+
+
 ### Ejercicio 5. Crear archivos
 Crear tres archivos vacíos.
+## Ejercicio 5
+```bash
+touch archivo1.txt archivo2.txt archivo3.txt
+```
 
 ### Ejercicio 6. Copiar y mover archivos
 - Copiar `archivo1.txt` a `/tmp`.
 - Renombrarlo como `copia.txt`.
 
+```bash
+cp archivo1.txt /tmp/copia.txt
+```
+
 ### Ejercicio 7. Buscar archivos
 Buscar todos los archivos `.conf` en `/etc`.
+
+
+```bash
+find /etc -name "*.conf"
+```
 
 ### Ejercicio 8. Ver contenido de archivos
 Mostrar el contenido del archivo de usuarios.
 
+```bash
+cat /etc/passwd
+less /etc/passwd
+```
+
 ### Ejercicio 9. Comprobar espacio en disco
 Ver uso de discos y particiones.
+```bash
+df -h
+```
 
 ### Ejercicio 10. Mostrar memoria RAM.
-
+```bash
+free -h
+```
 ## Nivel Intermedio
 
 ### Ejercicio 11. Gestión de usuarios
 Crear un usuario llamado `alumno`.
+### Gestión de usuarios
+```bash
+sudo useradd -m alumno
+sudo passwd alumno`
+sudo groupadd informatica
+sudo usermod -aG informatica alumno
+groups alumno
+``` 
+-m crea el directorio home del usuario.
+-s asigna el shell por defecto.
 
 ### Ejercicio 12. Gestión de grupos
 Crear el grupo `informatica` y añadir al usuario.
@@ -60,17 +123,55 @@ Configurar permisos 640 para un fichero.
 
 ### Ejercicio 15. Cambiar propietario
 Asignar propietario y grupo.
-
+```bash
+chmod 640 fichero.txt
+sudo chown alumno:informatica fichero.txt
+```
 ### Ejercicio 16. Monitorización de procesos.
+```bash
+ps aux
+top
+htop (hay que instalarlo previamente)
+kill PID
+kill -9 PID
+pkill -9 nombre_proceso
+*** y ojito que no pregunta y mata a todos los procesos con ese nombre.***
+```
+
 ### Ejercicio 17. Finalizar procesos.
+
 ### Ejercicio 18. Gestión de servicios.
+
+```bash
+systemctl status ssh
+sudo systemctl start ssh
+sudo systemctl enable ssh
+```
+stop y disable para parar y deshabilitar servicios.
+
 ### Ejercicio 19. Ver puertos abiertos.
-### Ejercicio 20. Instalar Apache.
+```bash
+ip addr
+ss -lntup
+ip route
+ping 8.8.8.8 -c numero_de_paquetes
+dig google.com
+```
+```bash
+journalctl
+journalctl -p err
+journalctl -u ssh
+```
 ### Ejercicio 21. Ver configuración IP.
 ### Ejercicio 22. Consultar rutas.
 ### Ejercicio 23. Probar conectividad.
 ### Ejercicio 24. Comprobar DNS.
 ### Ejercicio 25. Consultar logs.
+
+
+
+### Ejercicio 20. Instalar Apache.
+
 
 ## Nivel Avanzado
 
