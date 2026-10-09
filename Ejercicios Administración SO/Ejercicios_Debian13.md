@@ -178,6 +178,9 @@ journalctl -u ssh
 ### Ejercicio 26. Crear una tarea programada.
 ### Ejercicio 27. Comprimir directorios.
 ### Ejercicio 28. Ver discos y particiones.
+
+
+
 ### Ejercicio 29. Montar sistemas de archivos.
 ### Ejercicio 30. Crear RAID software.
 ### Ejercicio 31. Configurar firewall UFW.
@@ -187,9 +190,125 @@ journalctl -u ssh
 ### Ejercicio 35. Auditar usuarios conectados.
 ### Ejercicio 36. Analizar accesos SSH.
 ### Ejercicio 37. Crear claves SSH.
+
 ### Ejercicio 38. Gestión básica de Docker.
+
 ### Ejercicio 39. Crear un servicio systemd.
 ### Ejercicio 40. Diagnóstico completo del sistema.
 
+
+
+
 ## Reto Final
 Realizar una auditoría básica completa de un servidor Debian verificando sistema, disco, RAM, usuarios, servicios, red, logs y conectividad.
+
+### Gestión de usuarios
+```bash
+sudo useradd -m alumno
+sudo passwd alumno
+sudo groupadd informatica
+sudo usermod -aG informatica alumno
+groups alumno
+```
+Permiten crear usuarios, establecer contraseñas y gestionar grupos.
+
+### Permisos
+```bash
+chmod 640 fichero.txt
+sudo chown alumno:informatica fichero.txt
+```
+Controlan el acceso a archivos.
+
+### Procesos
+```bash
+ps aux
+top
+htop
+kill PID
+kill -9 PID
+```
+Sirven para monitorizar y finalizar procesos.
+
+### Servicios
+```bash
+systemctl status ssh
+sudo systemctl start ssh
+sudo systemctl enable ssh
+```
+Gestionan servicios del sistema.
+
+### Red
+```bash
+ip addr
+ip route
+ping 8.8.8.8
+dig google.com
+ss -lntup
+```
+Permiten verificar direccionamiento, rutas, DNS y puertos.
+
+### Logs
+```bash
+journalctl
+journalctl -p err
+journalctl -u ssh
+```
+Facilitan el diagnóstico de problemas.
+
+### Tareas programadas
+```bash
+crontab -e
+* * * * * date >> /tmp/fechas.log
+```
+Ejecutan tareas automáticas.
+
+### Copias de seguridad
+```bash
+tar -czvf copia.tar.gz carpeta/
+```
+Comprime directorios para respaldos.
+
+### Discos
+```bash
+lsblk
+sudo fdisk -l
+mount /dev/sdb1 /mnt/datos
+```
+Permiten administrar almacenamiento.
+
+### Seguridad
+```bash
+sudo apt install ufw
+sudo ufw allow ssh
+sudo ufw enable
+```
+Configuran el cortafuegos.
+
+### Docker
+```bash
+docker ps
+docker exec -it nginx bash
+docker attach nginx
+```
+Gestionan contenedores.
+
+### Systemd
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable prueba.service
+```
+Permiten crear servicios personalizados.
+
+### Diagnóstico final
+```bash
+hostnamectl
+free -h
+df -h
+who
+systemctl --type=service --state=running
+ip addr
+ss -lntup
+journalctl -xe
+ps aux --sort=-%cpu | head
+```
+Ofrecen una visión general del estado del servidor.

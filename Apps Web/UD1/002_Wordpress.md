@@ -17,7 +17,7 @@ sudo mysql -u root -p
 Crea la base de datos y el usuario:
 ```sql
 CREATE DATABASE wordpress DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'contraseña_segura';
+CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'wordpress_secure_password';
 GRANT ALL PRIVILEGES ON wordpress.* TO 'wpuser'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
@@ -59,7 +59,7 @@ Edita las líneas correspondientes:
 ```php
 define( 'DB_NAME', 'wordpress' );
 define( 'DB_USER', 'wpuser' );
-define( 'DB_PASSWORD', 'contraseña_segura' );
+define( 'DB_PASSWORD', 'wordpress_secure_password' );
 define( 'DB_HOST', 'localhost' );
 ```
 Genera claves de seguridad en:
@@ -78,7 +78,7 @@ Ejemplo de configuración:
     DocumentRoot /var/www/html/wordpress
     ServerName midominio.local
 
-    <Directory /var/www/html/wordpress/>
+    <Directory "/var/www/html/wordpress/">
         AllowOverride All
     </Directory>
 

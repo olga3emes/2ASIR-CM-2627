@@ -61,3 +61,7 @@ Las instancias reservadas sin pago anticipado (NURI) descuentos aún menores
 VPC, IAM 
 CloudWatch (con limitaciones), CloudTrail (con limitaciones), S3 (con limitaciones de almacenamiento y solicitudes), Lambda (con un nivel gratuito de invocaciones y tiempo de ejecución), DynamoDB (con un nivel gratuito de capacidad de lectura/escritura y almacenamiento), entre otros. Es importante revisar las condiciones del nivel gratuito de AWS para conocer los límites y restricciones aplicables a cada servicio.
 
+
+Módulo 3:
+
+S3 disponible 99,99% de disponibilidad y durabilidad de 11 nueves (99,999999999%) para los objetos almacenados. Esto significa que los datos almacenados en S3 están altamente disponibles y son extremadamente duraderos, lo que garantiza la integridad y seguridad de la información.
