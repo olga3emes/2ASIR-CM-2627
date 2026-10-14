@@ -65,3 +65,5 @@ CloudWatch (con limitaciones), CloudTrail (con limitaciones), S3 (con limitacion
 Módulo 3:
 
 S3 disponible 99,99% de disponibilidad y durabilidad de 11 nueves (99,999999999%) para los objetos almacenados. Esto significa que los datos almacenados en S3 están altamente disponibles y son extremadamente duraderos, lo que garantiza la integridad y seguridad de la información.
+
+Trusted Advisor: "Te reomiendo x" AWS Trusted Advisor es un servicio que proporciona recomendaciones y mejores prácticas para optimizar la infraestructura de AWS, mejorar la seguridad, reducir costos y aumentar el rendimiento de las aplicaciones.
