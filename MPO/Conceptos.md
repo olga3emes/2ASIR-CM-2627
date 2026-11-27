@@ -9,7 +9,10 @@ EC2, S3, RDS, Lambda, CloudFront, VPC, IAM, CloudWatch, CloudTrail.
 
 EC2: "Los servidores - como si me creo una MV". Elastic Compute Cloud, es un servicio de computación en la nube que permite a los usuarios ejecutar instancias de servidores virtuales en la infraestructura de AWS.
 
-S3: "Almacenamiento de objetos - como si me creo un disco duro - Google Drive cateto". Simple Storage Service, es un servicio de almacenamiento de objetos que permite a los usuarios almacenar y recuperar datos en la nube de manera escalable y segura.
+## Laboratorio S3 
+<img src="img/s3.png" height="50"  alt="S3 Lab">
+
+**S3:** "Almacenamiento de objetos - como si me creo un disco duro - Google Drive cateto". Simple Storage Service, es un servicio de almacenamiento de objetos que permite a los usuarios almacenar y recuperar datos en la nube de manera escalable y segura.
 
 RDS: "Base de datos - como si me creo una base de datos en mi ordenador". Relational Database Service, es un servicio administrado de bases de datos relacionales que facilita la configuración, operación y escalado de bases de datos en la nube.
 
@@ -26,8 +29,7 @@ CloudWatch: "Monitorización - como si me creo un monitor de recursos en mi orde
 
 CloudTrail: """"LOGS"""" -Auditoría - como si me creo un registro de auditoría en mi ordenador". AWS CloudTrail es un servicio que permite a los usuarios registrar y supervisar la actividad de la cuenta de AWS, proporcionando un historial de eventos y acciones realizadas en los recursos de AWS para fines de auditoría y cumplimiento.
 
-EC2 Autoscaling: "Escalado automático - como si me creo un script que se ejecuta en la nube". Amazon EC2 Auto Scaling es un servicio que permite a los usuarios ajustar automáticamente la capacidad de sus instancias EC2 en función de la demanda, asegurando un rendimiento óptimo y costos eficientes.
-
+EC2 Autoscaling: "Escalado automático - como si me creo un script que se ejecuta en la nube y me duplica los servidores o me los para". Amazon EC2 Auto Scaling es un servicio que permite a los usuarios ajustar automáticamente la capacidad de sus instancias EC2 en función de la demanda, asegurando un rendimiento óptimo y costos eficientes.
 
 Para crear una Well-Architected Application, se deben tener en cuenta los siguientes pilares:
 
@@ -44,26 +46,16 @@ Suponga que todo falla. Luego, diseñe en sentido inverso. --> PLAN DE CONTINGEN
 
 BBDD relacionales escalado vertical fácil muy difícil escalado horizontal. BBDD no relacionales escalado horizontal fácil muy difícil escalado vertical. (NoSQL, DynamoDB, MongoDB, etc.) NO es Ctrl+C Ctrl+V. 
 
-
 ACL: "Listas de control de acceso". Access Control Lists (ACLs) son mecanismos de seguridad que permiten a los usuarios definir reglas de acceso a recursos específicos, controlando quién puede acceder y qué acciones pueden realizar.
 
 Grupos de seguridad: "Firewall". Los grupos de seguridad son conjuntos de reglas de firewall que controlan el tráfico entrante y saliente hacia las instancias EC2, proporcionando una capa adicional de seguridad.
 
-Auri > Puri > Nuri
-
 Auri, Puri, Nuri: Modelo de reserva de instancias en AWS. Auri (Aurora Reserved Instances)Las instancias reservadas con pago total anticipado (AURI)  mayor descuento
 Las instancias reservadas con pago parcial anticipado (PURI) descuentos más bajos
 Las instancias reservadas sin pago anticipado (NURI) descuentos aún menores
- se refiere a instancias reservadas de Amazon Aurora, Puri (Provisioned Reserved Instances) se refiere a instancias reservadas provisionadas, y Nuri (Non-Reserved Instances) se refiere a instancias no reservadas
+ se refiere a instancias reservadas de Amazon Aurora, Puri (Provisioned Reserved Instances) se refiere a instancias reservadas provisionadas, y Nuri (Non-Totally Reserved Instances) se refiere a instancias no son totalmente reservadas.
 
+ Well-Architected: "como si le pregunto a mi profe cómo tengo que hacerlo" es un conjunto de buenas prácticas y principios que ayudan a los arquitectos de soluciones a diseñar, construir y mantener aplicaciones en la nube de manera eficiente, segura y escalable. El marco se basa en cinco pilares fundamentales.
 
-¿Qué servicios son gratis en AWS?
-VPC, IAM 
-CloudWatch (con limitaciones), CloudTrail (con limitaciones), S3 (con limitaciones de almacenamiento y solicitudes), Lambda (con un nivel gratuito de invocaciones y tiempo de ejecución), DynamoDB (con un nivel gratuito de capacidad de lectura/escritura y almacenamiento), entre otros. Es importante revisar las condiciones del nivel gratuito de AWS para conocer los límites y restricciones aplicables a cada servicio.
+ 
 
-
-Módulo 3:
-
-S3 disponible 99,99% de disponibilidad y durabilidad de 11 nueves (99,999999999%) para los objetos almacenados. Esto significa que los datos almacenados en S3 están altamente disponibles y son extremadamente duraderos, lo que garantiza la integridad y seguridad de la información.
-
-Trusted Advisor: "Te reomiendo x" AWS Trusted Advisor es un servicio que proporciona recomendaciones y mejores prácticas para optimizar la infraestructura de AWS, mejorar la seguridad, reducir costos y aumentar el rendimiento de las aplicaciones.
